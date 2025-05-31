@@ -228,29 +228,40 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
 ```
 #include <stdio.h>
 
-void replaceEvenWithE(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
+int main() {
+    int n;
+    
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    
+    int arr[n];
+    
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
         if (arr[i] % 2 == 0) {
-            arr[i] = 'E';
+            arr[i] = 'E'; 
         }
     }
-}
-
-int main() {
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
-    int size = sizeof(arr) / sizeof(arr[0]);
     
-    replaceEvenWithE(arr, size);
-
-    printf("Modified Array: ");
-    for (int i = 0; i < size; i++) {
-        printf("%c ", arr[i]);
+    printf("Updated array:\n");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == 'E') {
+            printf("'E' ");
+        } else {
+            printf("%d ", arr[i]);
+        }
     }
+    
+    printf("\n");
+    
     return 0;
 }
 ```
 ## Output:
-![image](https://github.com/user-attachments/assets/e5b914b5-d9cb-41b9-90ed-16f93cc2ef48)
+ ![image](https://github.com/user-attachments/assets/edef80b3-39e1-4bfa-af79-92a349f26b0b)
 
 
 
